@@ -6,9 +6,15 @@ v = [1 0];
 if strcmp(system,'Koch curve');
     angleLeft = 2/6;
     angleRight = -4/6;
+elseif strcmp(system,'Koch curve (version 2)');
+    angleLeft = 90/180;
+    angleRight = -90/180;
 elseif strcmp(system,'Sierpinski triangle');
     angleLeft = 2/6;
     angleRight = -angleLeft;
+elseif strcmp(system,'Dragon curve');
+    angleLeft = 90/180;
+    angleRight = -90/180;
 end
     
 for w=1:length(LindenmayerString)

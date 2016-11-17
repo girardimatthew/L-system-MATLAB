@@ -1,6 +1,8 @@
 function [Lsystem,N] = parseLsys()
     optLsys = {'Koch curve',...
+        'Koch curve (version 2)',...
         'Sierpinski triangle',...
+        'Dragon curve',...
         'Back to Main options'};
 
     % print L-system options
@@ -9,12 +11,18 @@ function [Lsystem,N] = parseLsys()
         whichSys = input('Please enter a valid L-system: ', 's');
         whichSys = str2double(whichSys);
         if (whichSys==1)
-            Lsystem = optLsys{1};
+            Lsystem = optLsys{whichSys};
             break;
         elseif (whichSys==2)
-            Lsystem = optLsys{2};
+            Lsystem = optLsys{whichSys};
             break;
         elseif (whichSys==3)
+            Lsystem = optLsys{whichSys};
+            break;
+        elseif (whichSys==4)
+            Lsystem = optLsys{whichSys};
+            break;
+        elseif (whichSys==5)
             Lsystem = '';
             N = -1;
             fprintf(2,'WARNING: No L-system selected. Back to main options.\n');
@@ -31,7 +39,7 @@ function [Lsystem,N] = parseLsys()
             fprintf(2,'WARNING: invalid input. Please try again.\n');
         elseif N>=0 && N<=8
             break;
-        elseif N>8 && N<=12
+        elseif N>8 && N<=15
             fprintf(2,'Be aware of computational time.\n');
             break;
         else 
