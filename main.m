@@ -26,8 +26,15 @@ fprintf('To select an option, please enter \nthe corresponding number of \nthat 
 fprintf('You can choose one \nof the following options: \n');
 printOpt(mainOpt);
 
+system = 'None';
+N = -1;
+
 % check which option
 while true
+    fprintf('------------------- Infos --------------------\n');
+    fprintf(2,'L-system: %s\n',system);
+    fprintf(2,'N-of-iterations: %d\n',N);
+    fprintf('----------------------------------------------\n');
     % ask user for input
     fprintf('Main options > ');
     cmd = input('Please enter an option: ', 's');
@@ -53,7 +60,7 @@ while true
             if ((exist('LindenmayerString','var')==1) && ~isempty(LindenmayerString))
                 turtlePlot(turtleCommands,system,N);
             else
-                fprintf(2,'No data found. Please choose the L-system and N iterations first.\n');
+                fprintf(2,'WARNING: No data found.\nPlease choose the L-system and N iterations first.\n');
             end
         % options 6 - list options
         elseif dcmd == optListCmd

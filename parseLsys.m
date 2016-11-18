@@ -23,7 +23,7 @@ function [Lsystem,N] = parseLsys()
             Lsystem = optLsys{whichSys};
             break;
         elseif (whichSys==5)
-            Lsystem = '';
+            Lsystem = 'None';
             N = -1;
             fprintf(2,'WARNING: No L-system selected. Back to main options.\n');
             return;
@@ -39,7 +39,7 @@ function [Lsystem,N] = parseLsys()
             fprintf(2,'WARNING: invalid input. Please try again.\n');
         elseif N>=0 && N<=8
             break;
-        elseif N>8 && N<=15
+        elseif N>8 && N<=25
             fprintf(2,'Be aware of computational time.\n');
             break;
         else 
