@@ -1,4 +1,4 @@
-function [Lsystem,N] = parseLsys()
+function [Lsystem,N] = parseLsys(system,M)
     optLsys = {'Koch curve',...
         'Koch curve (version 2)',...
         'Sierpinski triangle',...
@@ -23,9 +23,9 @@ function [Lsystem,N] = parseLsys()
             Lsystem = optLsys{whichSys};
             break;
         elseif (whichSys==5)
-            Lsystem = 'None';
-            N = -1;
-            fprintf(2,'WARNING: No L-system selected. Back to main options.\n');
+            Lsystem = system;
+            N = M;
+            fprintf(2,'Back to main options.\n');
             return;
         else
             fprintf(2,'WARNING: Unknown/invalid option. Please try again.\n');

@@ -6,8 +6,8 @@ rule(1).after = 'SLSRSLS';
 rule(2).before = 'R';
 rule(2).after = 'R';%
 
-rule(2).before = 'L';
-rule(2).after = 'L';%  
+rule(3).before = 'L';
+rule(3).after = 'L';%  
 
 nRules = length(rule);
 

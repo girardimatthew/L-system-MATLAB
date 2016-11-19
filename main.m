@@ -49,7 +49,7 @@ while true
         elseif dcmd == optLsys
             fprintf('Option 1: ');
             % check if input string is valid
-            [system,N] = parseLsys();
+            [system,N] = parseLsys(system,N);
             if ~isempty(system) && N>=0
                 [LindenmayerString,len] = LindIter(system,N);
                 turtleCommands = turtleGraph(LindenmayerString,system,len);
@@ -60,7 +60,7 @@ while true
             if ((exist('LindenmayerString','var')==1) && ~isempty(LindenmayerString))
                 turtlePlot(turtleCommands,system,N);
             else
-                fprintf(2,'WARNING: No data found.\nPlease choose the L-system and N iterations first.\n');
+                fprintf(2,'WARNING: No data found.\nPlease choose L-system and N iterations first.\n');
             end
         % options 6 - list options
         elseif dcmd == optListCmd
