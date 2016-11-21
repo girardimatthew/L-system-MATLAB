@@ -1,4 +1,19 @@
 function [LMstring,len] = koch(N)
+%koch
+%   
+%   This function computes the Lindenmayer string (symbols) 
+%   based on some pre-defined rules.
+%   [LMstring,len] = koch(N)
+%
+%   INPUT  
+%   - N:            Number of Iteration
+%
+%   OUTPUT
+%   - LMsystem:     A string of symbols representing 
+%                   the state of the system after 
+%                   the Lindemayer iteration
+%   - len:          ratio
+%
 
 rule(1).before = 'S';
 rule(1).after = 'SLSRSLS';

@@ -44,6 +44,7 @@ while true
         % option 3 - Quit
         if dcmd == optQuit
             fprintf(2,'> Quit.\n');
+            % clear all; close all;
             break;
         % option 1 - Choose the type of Lindenmayer system and the number of iterations
         elseif dcmd == optLsys

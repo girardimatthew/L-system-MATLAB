@@ -1,5 +1,19 @@
 function [LMstring,len] = sierpinski(N)
-
+%sierpinski
+%   
+%   This function computes the Lindenmayer string (symbols) 
+%   based on some pre-defined rules.
+%   [LMstring,len] = sierpinski(N)
+%
+%   INPUT  
+%   - N:            Number of Iteration
+%
+%   OUTPUT
+%   - LMsystem:     A string of symbols representing 
+%                   the state of the system after 
+%                   the Lindemayer iteration
+%   - len:          ratio
+%
 rule(1).before = 'A';
 rule(1).after = 'BRARB';
 

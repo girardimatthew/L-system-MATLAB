@@ -1,4 +1,18 @@
 function [LMstring,len] = dragon(N)
+%dragon
+%   
+%   This function computes the Lindenmayer string (symbols) 
+%   based on some pre-defined rules and N iteration.
+%   [LMstring,len] = dragon(N)
+%
+%   INPUT  
+%   - N:            Number of Iteration
+%
+%   OUTPUT
+%   - LMsystem:     A string of symbols representing 
+%                   the state of the system after 
+%                   the Lindemayer iteration
+%   - len:          ratio
 
 rule(1).before = 'F';
 rule(1).after = 'FRH';

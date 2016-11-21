@@ -1,7 +1,10 @@
 function printOpt(options)
-%printOpt print strings
+%printOpt 
 %
-%   printOpt(options) 
+%   print strings
+%
+%   USAGE:
+%   - printOpt(options) 
 %
 %   INPUT
 %   - options: a cell-array of strings.

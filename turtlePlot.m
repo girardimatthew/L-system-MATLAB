@@ -1,5 +1,17 @@
 function turtlePlot(turtleCommands,system,N)
-%%Turtle Plots
+%turtleGraph
+%   
+%   The plot function should turn the input vector 
+%   turtleCommands into a graphical visualisation.
+%   turtleCommands = turtleGraph(LindenmayerString,system,len)
+%
+%   INPUT
+%   - turtleCommands:           A row vector consisting of alternating 
+%                               length and angle specifications
+%
+%   - system:                   A string telling which L-system.
+%   - len:                      Ratio. Scaling the length of line
+%
 close all; 
 x = [0;0];
 d = [1;0];
@@ -18,5 +30,4 @@ ax = gca;
 ax.FontSize = 16;
 title(system)
 xlabel(['Number of Iterations: ', num2str(N)]);
-%axis([0 1 -1 1])
 end

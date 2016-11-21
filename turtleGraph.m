@@ -1,12 +1,27 @@
 function turtleCommands = turtleGraph(LindenmayerString,system,len)
-%axiom = 'S';
-%axiom = 'SLSRSLS';
-%axiom  = 'SLSRSLSLSLSRSLSRSLSRSLSLSLSRSLS';
+%turtleGraph
+%   
+%   This function translates the string of symbols in LindenmayerString 
+%   into a sequence of turtle graphics commands.
+%   turtleCommands = turtleGraph(LindenmayerString,system,len)
+%
+%   INPUT
+%   - LindenmayerString:        A string of symbols representing 
+%                               the state of the system after 
+%                               the Lindemayer iteration.
+%   - system:                   A string telling which L-system.
+%   - len:                      Ratio. Scaling the length of line
+%
+%   OUTPUT
+%   - turtleCommands:           A row vector containing the turtle graphics
+%                               commands consisting of alternating length 
+%                               and angle specifications
+%
 v = [1 0];
-if strcmp(system,'Koch curve');
+if strcmp(system,'Koch curve version 1');
     angleLeft = 2/6;
     angleRight = -4/6;
-elseif strcmp(system,'Koch curve (version 2)');
+elseif strcmp(system,'Koch curve version 2');
     angleLeft = 90/180;
     angleRight = -90/180;
 elseif strcmp(system,'Sierpinski triangle');
