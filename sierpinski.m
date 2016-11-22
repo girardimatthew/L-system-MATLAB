@@ -1,8 +1,9 @@
 function [LMstring,len] = sierpinski(N)
 %sierpinski
 %   
-%   This function computes the Lindenmayer string (symbols) 
-%   based on some pre-defined rules.
+%   This function computes a Lindenmayer string (symbols) 
+%   based on some pre-defined rules and N iterations, 
+%   in order to display a Sierpinski triangle.
 %   [LMstring,len] = sierpinski(N)
 %
 %   INPUT  

@@ -1,7 +1,7 @@
 function printOpt(options)
 %printOpt 
 %
-%   print strings
+%   This function prints menu options.
 %
 %   USAGE:
 %   - printOpt(options) 

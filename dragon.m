@@ -2,7 +2,8 @@ function [LMstring,len] = dragon(N)
 %dragon
 %   
 %   This function computes the Lindenmayer string (symbols) 
-%   based on some pre-defined rules and N iteration.
+%   based on some pre-defined rules and N iteration, 
+%   in order to display a Dragon curve.
 %   [LMstring,len] = dragon(N)
 %
 %   INPUT  

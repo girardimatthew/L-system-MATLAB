@@ -53,7 +53,7 @@ function [Lsystem,N] = parseLsys(system,M)
             fprintf(2,'WARNING: invalid input. Please try again.\n');
         elseif N>=0 && N<6
             break;
-        elseif N>=6 && N<=15
+        elseif N>=6 && N<=25
             fprintf(2,'WARNING: Be aware of computational time!\n');
             break;
         else 

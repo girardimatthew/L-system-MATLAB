@@ -52,18 +52,21 @@ while true
             % check if input string is valid
             [system,N] = parseLsys(system,N);
             if ~isempty(system) && N>=0
+                fprintf('Computing... ');
                 [LindenmayerString,len] = LindIter(system,N);
                 turtleCommands = turtleGraph(LindenmayerString,system,len);
+                fprintf('done!\n');
             end
         % option 2 - Generate plots
         elseif dcmd == optPlots
-            fprintf('Option 2: Generate plot\n');
+            fprintf('Option 2: Generating plot... ');
             if ((exist('LindenmayerString','var')==1) && ~isempty(LindenmayerString))
                 turtlePlot(turtleCommands,system,N);
+                fprintf('done!\n');
             else
-                fprintf(2,'WARNING: No data found.\nPlease choose L-system and N iterations first.\n');
+                fprintf(2,'\nWARNING: No data found.\nPlease choose L-system and N iterations first.\n');
             end
-        % options 6 - list options
+        % options 4 - list options
         elseif dcmd == optListCmd
             fprintf('Available options: \n');
             printOpt(mainOpt);
@@ -73,7 +76,7 @@ while true
             fprintf(2,'To select an option, please enter the corresponding\nnumber (1..%d) of that option.\n', length(mainOpt));
             printOpt(mainOpt);
         end
-    % if it is a string
+    % if it is not a string
     else
         fprintf(2,'Unknown option "%s". Please choose a valid option.\n', cmd);
         fprintf(2,'To select an option, please enter the corresponding\nnumber (1..%d) of that option.\n', length(mainOpt));

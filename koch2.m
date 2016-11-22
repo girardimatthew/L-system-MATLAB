@@ -2,7 +2,8 @@ function [LMstring,len] = koch2(N)
 %koch - version 002
 %   
 %   This function computes the Lindenmayer string (symbols) 
-%   based on some pre-defined rules.
+%   based on some pre-defined rules and N iteration,
+%   in order to display a Koch curve (Quadratic type 1 curve)
 %   [LMstring,len] = koch2(N)
 %
 %   INPUT  

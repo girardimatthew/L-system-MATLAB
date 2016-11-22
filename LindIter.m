@@ -1,7 +1,7 @@
 function [LindernmayerString,len] = LindIter(system, N)
 %LindIter
 %   
-%   The function must calculate N iterations of the system specified by 
+%   The function calculates N iterations of the system specified by 
 %   system according to the replacement rules for the Koch curve 
 %   Sierpinski triangle, Koch curve (version 002) 
 %   and dragon curve respectively.
